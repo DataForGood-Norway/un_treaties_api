@@ -18,8 +18,12 @@ EXPOSE 5000
 
 # ENTRYPOINT ["python3"]
 
+
+RUN useradd -m myuser
+USER myuser
+
 # CMD ["-m", "swagger_server", "--port", $PORT]
 # CMD ["-m", "swagger_server", "--port", "5000"]
 # CMD ["swagger_server/__main__.py", "--port", $PORT]
 
-CMD python -m swagger_server --port=5000
+CMD python -m swagger_server --port "$PORT"

@@ -91,7 +91,7 @@ You may already 3 easy ways to rebuilt the "empty" Swagger API:
 We use Docker to deploy the API on [Heroku](https://dashboard.heroku.com/).
 
 * Build th Docker image: `docker build -t un-treaties-api:latest .`
-* Run the image locally: `docker run  -p 5000:5000 un-docker-test`
+* Run the image locally: `docker run  -p 5000:5000 un-treaties-api`
 
 You can check that the API runs on your local machine at this URL: 
 

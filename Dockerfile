@@ -1,13 +1,16 @@
-FROM python:3-alpine
+FROM continuumio/miniconda3
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN conda create -n env python=3.7
+RUN echo "source activate env" > ~/.bashrc
+ENV PATH /opt/conda/envs/env/bin:$PATH
 
-COPY requirements.txt /usr/src/app/
+RUN pip install --upgrade pip
+RUN pip install connexion[swagger-ui]
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+COPY . /app
+WORKDIR /app
 
-COPY . /usr/src/app
+RUN python -m pip install -e .
 
 EXPOSE 8080
 

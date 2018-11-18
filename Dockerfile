@@ -16,4 +16,4 @@ EXPOSE $PORT
 
 ENTRYPOINT ["python3"]
 
-CMD ["-m", "swagger_server", "--port=$PORT"]
+CMD ["-m", "swagger_server", "--port", $PORT]

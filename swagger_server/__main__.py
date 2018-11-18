@@ -2,6 +2,7 @@
 
 import connexion
 from flask import render_template, redirect, url_for
+import click
 from swagger_server import encoder
 
 app = connexion.App(__name__, specification_dir='./swagger/')
@@ -17,8 +18,10 @@ def home():
     """
     return render_template("home.html")
 
-def main():
-    app.run(host="0.0.0.0", port=8080, debug=True)
+@click.command()
+@click.option('--port', default='5000', help='Port of the app to expose')
+def main(port):
+    app.run(host="0.0.0.0", port=port, debug=False)
 
 
 if __name__ == '__main__':

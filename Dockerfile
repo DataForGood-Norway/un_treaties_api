@@ -12,8 +12,8 @@ WORKDIR /app
 
 RUN python -m pip install -e .
 
-EXPOSE 8080
+EXPOSE $PORT
 
 ENTRYPOINT ["python3"]
 
-CMD ["-m", "swagger_server"]
+CMD ["-m", "swagger_server", "--port=$PORT"]

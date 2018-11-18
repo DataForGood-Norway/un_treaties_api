@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <title>Application Home Page</title>
     <head>
-        <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
-        "{{ url_for('static.images', filename = 'favicon.ico') }}"
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+        <link rel="icon" href="{{ url_for('static', filename = 'favicon.ico') }}" type="image/gif" sizes="16x16">
     </head>
 </head>
 <body>
-    <h2>
-        Welcome to this awesome API! Try it out using the <A href="/api/ui">user interface.</A>
-    </h2>
+    <div class="responsive-container">
+        <div class="img-container">
+                <span>{</span>
+                <a href="/api/ui">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/UN_emblem_blue.svg/905px-UN_emblem_blue.svg.png" alt="" />
+                </a>
+                <span>}</span>
+
+        </div>
+    </div>
 </body>
 </html>
+
+
+

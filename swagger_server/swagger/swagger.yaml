@@ -4,7 +4,7 @@ info:
   description: "This is an API about United Nations Treaties."
   version: "1.0.0"
   title: "The United Nations Treaties REST API"
-  termsOfService: "http://swagger.io/terms/"
+  #termsOfService: "http://swagger.io/terms/"
   contact:
     email: "team@dataforgood.no"
   license:

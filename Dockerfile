@@ -11,9 +11,6 @@ WORKDIR /app
 
 RUN python -m pip install -e .
 
-RUN echo $PORT
-
-# EXPOSE $PORT
 EXPOSE 5000
 
 # ENTRYPOINT ["python3"]

@@ -25,7 +25,7 @@ def home():
     "--port", default=os.environ.get("PORT"), help="Port of the app to expose"
 )
 def main(port):
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=port, debug=False)
 
 
 if __name__ == "__main__":

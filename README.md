@@ -117,4 +117,4 @@ origin	git@github.com:DataForGood-Norway/un_treaties.git (push)
 * open you are from the terminal: `heroku open`
 
 
-# https://deparkes.co.uk/2018/05/28/deploy-docker-to-heroku/
+In case you need to debug your deployment to Heroku, this simple example has been helpful: https://deparkes.co.uk/2018/05/28/deploy-docker-to-heroku/

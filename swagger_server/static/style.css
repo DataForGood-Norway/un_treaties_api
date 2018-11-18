@@ -38,6 +38,7 @@
     color: #4F94E1;
     vertical-align: middle;
     display: inline-block;
-    font-size: 250px;
+    /* font-size: 250px; */
+    font-size:15vw;
     font-family: "Times New Roman", Times, serif;
 }

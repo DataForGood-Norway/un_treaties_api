@@ -15,7 +15,7 @@ RUN python -m pip install -e .
 EXPOSE $PORT
 #EXPOSE 5000
 
-ENTRYPOINT ["python3"]
+# ENTRYPOINT ["python3"]
 
-CMD ["-m", "swagger_server", "--port", $PORT]
+CMD ["python3", "-m", "swagger_server", "--port", $PORT]
 # CMD ["-m", "swagger_server", "--port", "5000"]

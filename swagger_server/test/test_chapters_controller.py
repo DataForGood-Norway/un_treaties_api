@@ -17,13 +17,11 @@ class TestChaptersController(BaseTestCase):
 
         Finds chapters by tags
         """
-        query_string = [('tags', 'tags_example')]
+        query_string = [("tags", "tags_example")]
         response = self.client.open(
-            '/api/chapters/findByTags',
-            method='GET',
-            query_string=query_string)
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+            "/api/chapters/findByTags", method="GET", query_string=query_string
+        )
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
     def test_get_chapter_by_id(self):
         """Test case for get_chapter_by_id
@@ -31,23 +29,20 @@ class TestChaptersController(BaseTestCase):
         Find a chapter by Id
         """
         response = self.client.open(
-            '/api/chapters/{chapterId}'.format(chapterId=789),
-            method='GET')
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+            "/api/chapters/{chapterId}".format(chapterId=789), method="GET"
+        )
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
     def test_get_chapters(self):
         """Test case for get_chapters
 
         Get the list of chapters
         """
-        response = self.client.open(
-            '/api/chapters',
-            method='GET')
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+        response = self.client.open("/api/chapters", method="GET")
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import unittest
+
     unittest.main()

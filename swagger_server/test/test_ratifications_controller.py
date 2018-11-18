@@ -18,10 +18,12 @@ class TestRatificationsController(BaseTestCase):
         Find ratifications for a given participant
         """
         response = self.client.open(
-            '/api/ratifications/participantId/{participantId}'.format(participantId=789),
-            method='GET')
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+            "/api/ratifications/participantId/{participantId}".format(
+                participantId=789
+            ),
+            method="GET",
+        )
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
     def test_get_ratifications_by_treaty_id(self):
         """Test case for get_ratifications_by_treaty_id
@@ -29,12 +31,12 @@ class TestRatificationsController(BaseTestCase):
         Find ratifications for a given treaty
         """
         response = self.client.open(
-            '/api/ratifications/treatyId/{treatyId}'.format(treatyId=789),
-            method='GET')
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+            "/api/ratifications/treatyId/{treatyId}".format(treatyId=789), method="GET"
+        )
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import unittest
+
     unittest.main()

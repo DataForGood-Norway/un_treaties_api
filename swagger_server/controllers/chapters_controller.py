@@ -15,7 +15,7 @@ def find_chapters_by_tags(tags):  # noqa: E501
 
     :rtype: List[Chapter]
     """
-    return 'do some magic!'
+    return "do some magic!"
 
 
 def get_chapter_by_id(chapterId):  # noqa: E501
@@ -28,7 +28,7 @@ def get_chapter_by_id(chapterId):  # noqa: E501
 
     :rtype: Chapter
     """
-    return 'do some magic!'
+    return "do some magic!"
 
 
 def get_chapters():  # noqa: E501
@@ -39,4 +39,4 @@ def get_chapters():  # noqa: E501
 
     :rtype: Chapter
     """
-    return 'do some magic!'
+    return "do some magic!"

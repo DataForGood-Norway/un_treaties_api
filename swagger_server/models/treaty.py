@@ -17,7 +17,15 @@ class Treaty(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, id: int=None, name: str=None, chapter_id: int=None, tags: List[Tag]=None, participants: List[Participant]=None, status: str=None):  # noqa: E501
+    def __init__(
+        self,
+        id: int = None,
+        name: str = None,
+        chapter_id: int = None,
+        tags: List[Tag] = None,
+        participants: List[Participant] = None,
+        status: str = None,
+    ):  # noqa: E501
         """Treaty - a model defined in Swagger
 
         :param id: The id of this Treaty.  # noqa: E501
@@ -34,21 +42,21 @@ class Treaty(Model):
         :type status: str
         """
         self.swagger_types = {
-            'id': int,
-            'name': str,
-            'chapter_id': int,
-            'tags': List[Tag],
-            'participants': List[Participant],
-            'status': str
+            "id": int,
+            "name": str,
+            "chapter_id": int,
+            "tags": List[Tag],
+            "participants": List[Participant],
+            "status": str,
         }
 
         self.attribute_map = {
-            'id': 'id',
-            'name': 'name',
-            'chapter_id': 'chapterId',
-            'tags': 'tags',
-            'participants': 'participants',
-            'status': 'status'
+            "id": "id",
+            "name": "name",
+            "chapter_id": "chapterId",
+            "tags": "tags",
+            "participants": "participants",
+            "status": "status",
         }
 
         self._id = id
@@ -59,7 +67,7 @@ class Treaty(Model):
         self._status = status
 
     @classmethod
-    def from_dict(cls, dikt) -> 'Treaty':
+    def from_dict(cls, dikt) -> "Treaty":
         """Returns the dict as a model
 
         :param dikt: A dict.
@@ -111,7 +119,9 @@ class Treaty(Model):
         :type name: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+            raise ValueError(
+                "Invalid value for `name`, must not be `None`"
+            )  # noqa: E501
 
         self._name = name
 
@@ -134,7 +144,9 @@ class Treaty(Model):
         :type chapter_id: int
         """
         if chapter_id is None:
-            raise ValueError("Invalid value for `chapter_id`, must not be `None`")  # noqa: E501
+            raise ValueError(
+                "Invalid value for `chapter_id`, must not be `None`"
+            )  # noqa: E501
 
         self._chapter_id = chapter_id
 
@@ -203,8 +215,9 @@ class Treaty(Model):
         allowed_values = ["pending", "entered into force"]  # noqa: E501
         if status not in allowed_values:
             raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
+                "Invalid value for `status` ({0}), must be one of {1}".format(
+                    status, allowed_values
+                )
             )
 
         self._status = status

@@ -13,4 +13,4 @@ def get_tags():  # noqa: E501
 
     :rtype: Tag
     """
-    return 'do some magic!'
+    return "do some magic!"

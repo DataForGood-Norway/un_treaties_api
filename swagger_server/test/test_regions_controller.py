@@ -17,13 +17,11 @@ class TestRegionsController(BaseTestCase):
 
         Get the whole list of regions
         """
-        response = self.client.open(
-            '/api/regions',
-            method='GET')
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+        response = self.client.open("/api/regions", method="GET")
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import unittest
+
     unittest.main()

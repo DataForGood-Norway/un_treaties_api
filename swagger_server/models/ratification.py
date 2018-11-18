@@ -15,7 +15,13 @@ class Ratification(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, id: int=None, date: date=None, treaty_id: int=None, participant_id: int=None):  # noqa: E501
+    def __init__(
+        self,
+        id: int = None,
+        date: date = None,
+        treaty_id: int = None,
+        participant_id: int = None,
+    ):  # noqa: E501
         """Ratification - a model defined in Swagger
 
         :param id: The id of this Ratification.  # noqa: E501
@@ -28,17 +34,17 @@ class Ratification(Model):
         :type participant_id: int
         """
         self.swagger_types = {
-            'id': int,
-            'date': date,
-            'treaty_id': int,
-            'participant_id': int
+            "id": int,
+            "date": date,
+            "treaty_id": int,
+            "participant_id": int,
         }
 
         self.attribute_map = {
-            'id': 'id',
-            'date': 'date',
-            'treaty_id': 'treatyId',
-            'participant_id': 'participantId'
+            "id": "id",
+            "date": "date",
+            "treaty_id": "treatyId",
+            "participant_id": "participantId",
         }
 
         self._id = id
@@ -47,7 +53,7 @@ class Ratification(Model):
         self._participant_id = participant_id
 
     @classmethod
-    def from_dict(cls, dikt) -> 'Ratification':
+    def from_dict(cls, dikt) -> "Ratification":
         """Returns the dict as a model
 
         :param dikt: A dict.
@@ -99,7 +105,9 @@ class Ratification(Model):
         :type date: date
         """
         if date is None:
-            raise ValueError("Invalid value for `date`, must not be `None`")  # noqa: E501
+            raise ValueError(
+                "Invalid value for `date`, must not be `None`"
+            )  # noqa: E501
 
         self._date = date
 
@@ -122,7 +130,9 @@ class Ratification(Model):
         :type treaty_id: int
         """
         if treaty_id is None:
-            raise ValueError("Invalid value for `treaty_id`, must not be `None`")  # noqa: E501
+            raise ValueError(
+                "Invalid value for `treaty_id`, must not be `None`"
+            )  # noqa: E501
 
         self._treaty_id = treaty_id
 
@@ -145,6 +155,8 @@ class Ratification(Model):
         :type participant_id: int
         """
         if participant_id is None:
-            raise ValueError("Invalid value for `participant_id`, must not be `None`")  # noqa: E501
+            raise ValueError(
+                "Invalid value for `participant_id`, must not be `None`"
+            )  # noqa: E501
 
         self._participant_id = participant_id

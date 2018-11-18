@@ -18,10 +18,10 @@ class TestSignaturesController(BaseTestCase):
         Find signatures for a given participant
         """
         response = self.client.open(
-            '/api/signatures/participantId/{participantId}'.format(participantId=789),
-            method='GET')
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+            "/api/signatures/participantId/{participantId}".format(participantId=789),
+            method="GET",
+        )
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
     def test_get_signatures_by_treaty_id(self):
         """Test case for get_signatures_by_treaty_id
@@ -29,12 +29,12 @@ class TestSignaturesController(BaseTestCase):
         Find signatures for a given treaty
         """
         response = self.client.open(
-            '/api/signatures/treatyId/{treatyId}'.format(treatyId=789),
-            method='GET')
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+            "/api/signatures/treatyId/{treatyId}".format(treatyId=789), method="GET"
+        )
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import unittest
+
     unittest.main()

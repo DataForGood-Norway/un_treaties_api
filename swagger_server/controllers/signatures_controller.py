@@ -15,7 +15,7 @@ def get_signatures_by_participant_id(participantId):  # noqa: E501
 
     :rtype: List[Signature]
     """
-    return 'do some magic!'
+    return "do some magic!"
 
 
 def get_signatures_by_treaty_id(treatyId):  # noqa: E501
@@ -28,4 +28,4 @@ def get_signatures_by_treaty_id(treatyId):  # noqa: E501
 
     :rtype: List[Signature]
     """
-    return 'do some magic!'
+    return "do some magic!"

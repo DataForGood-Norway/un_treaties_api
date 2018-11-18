@@ -115,3 +115,6 @@ origin	git@github.com:DataForGood-Norway/un_treaties.git (push)
 * then simply push your app the Heroku container registry: `git push heroku master`
 * run the app on Heroku: `heroku ps:scale web=1`
 * open you are from the terminal: `heroku open`
+
+
+# https://deparkes.co.uk/2018/05/28/deploy-docker-to-heroku/

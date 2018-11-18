@@ -17,7 +17,13 @@ class Chapter(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, id: int=None, name: str=None, treaties: List[Treaty]=None, tags: List[Tag]=None):  # noqa: E501
+    def __init__(
+        self,
+        id: int = None,
+        name: str = None,
+        treaties: List[Treaty] = None,
+        tags: List[Tag] = None,
+    ):  # noqa: E501
         """Chapter - a model defined in Swagger
 
         :param id: The id of this Chapter.  # noqa: E501
@@ -30,17 +36,17 @@ class Chapter(Model):
         :type tags: List[Tag]
         """
         self.swagger_types = {
-            'id': int,
-            'name': str,
-            'treaties': List[Treaty],
-            'tags': List[Tag]
+            "id": int,
+            "name": str,
+            "treaties": List[Treaty],
+            "tags": List[Tag],
         }
 
         self.attribute_map = {
-            'id': 'id',
-            'name': 'name',
-            'treaties': 'treaties',
-            'tags': 'tags'
+            "id": "id",
+            "name": "name",
+            "treaties": "treaties",
+            "tags": "tags",
         }
 
         self._id = id
@@ -49,7 +55,7 @@ class Chapter(Model):
         self._tags = tags
 
     @classmethod
-    def from_dict(cls, dikt) -> 'Chapter':
+    def from_dict(cls, dikt) -> "Chapter":
         """Returns the dict as a model
 
         :param dikt: A dict.
@@ -101,7 +107,9 @@ class Chapter(Model):
         :type name: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+            raise ValueError(
+                "Invalid value for `name`, must not be `None`"
+            )  # noqa: E501
 
         self._name = name
 

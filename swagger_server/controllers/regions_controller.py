@@ -13,4 +13,4 @@ def get_regions():  # noqa: E501
 
     :rtype: Region
     """
-    return 'do some magic!'
+    return "do some magic!"

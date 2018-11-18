@@ -16,7 +16,9 @@ class Participant(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, id: int=None, name: str=None, region: Region=None):  # noqa: E501
+    def __init__(
+        self, id: int = None, name: str = None, region: Region = None
+    ):  # noqa: E501
         """Participant - a model defined in Swagger
 
         :param id: The id of this Participant.  # noqa: E501
@@ -26,24 +28,16 @@ class Participant(Model):
         :param region: The region of this Participant.  # noqa: E501
         :type region: Region
         """
-        self.swagger_types = {
-            'id': int,
-            'name': str,
-            'region': Region
-        }
+        self.swagger_types = {"id": int, "name": str, "region": Region}
 
-        self.attribute_map = {
-            'id': 'id',
-            'name': 'name',
-            'region': 'region'
-        }
+        self.attribute_map = {"id": "id", "name": "name", "region": "region"}
 
         self._id = id
         self._name = name
         self._region = region
 
     @classmethod
-    def from_dict(cls, dikt) -> 'Participant':
+    def from_dict(cls, dikt) -> "Participant":
         """Returns the dict as a model
 
         :param dikt: A dict.
@@ -95,7 +89,9 @@ class Participant(Model):
         :type name: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+            raise ValueError(
+                "Invalid value for `name`, must not be `None`"
+            )  # noqa: E501
 
         self._name = name
 
@@ -118,6 +114,8 @@ class Participant(Model):
         :type region: Region
         """
         if region is None:
-            raise ValueError("Invalid value for `region`, must not be `None`")  # noqa: E501
+            raise ValueError(
+                "Invalid value for `region`, must not be `None`"
+            )  # noqa: E501
 
         self._region = region

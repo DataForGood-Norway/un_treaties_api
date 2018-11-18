@@ -17,37 +17,30 @@ class TestTreatiesController(BaseTestCase):
 
         Finds treaties by status
         """
-        query_string = [('status', 'available')]
+        query_string = [("status", "available")]
         response = self.client.open(
-            '/api/treaties/findByStatus',
-            method='GET',
-            query_string=query_string)
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+            "/api/treaties/findByStatus", method="GET", query_string=query_string
+        )
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
     def test_find_treaties_by_tags(self):
         """Test case for find_treaties_by_tags
 
         Finds treaties by tags
         """
-        query_string = [('tags', 'tags_example')]
+        query_string = [("tags", "tags_example")]
         response = self.client.open(
-            '/api/treaties/findByTags',
-            method='GET',
-            query_string=query_string)
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+            "/api/treaties/findByTags", method="GET", query_string=query_string
+        )
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
     def test_get_treaties(self):
         """Test case for get_treaties
 
         Get the list of treaties
         """
-        response = self.client.open(
-            '/api/treaties',
-            method='GET')
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+        response = self.client.open("/api/treaties", method="GET")
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
     def test_get_treaty_by_id(self):
         """Test case for get_treaty_by_id
@@ -55,12 +48,12 @@ class TestTreatiesController(BaseTestCase):
         Find a treaty by Id
         """
         response = self.client.open(
-            '/api/treaties/{treatyId}'.format(treatyId=789),
-            method='GET')
-        self.assert200(response,
-                       'Response body is : ' + response.data.decode('utf-8'))
+            "/api/treaties/{treatyId}".format(treatyId=789), method="GET"
+        )
+        self.assert200(response, "Response body is : " + response.data.decode("utf-8"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import unittest
+
     unittest.main()

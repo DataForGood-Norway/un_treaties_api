@@ -15,7 +15,7 @@ def get_participant_by_id(participantId):  # noqa: E501
 
     :rtype: Participant
     """
-    return 'do some magic!'
+    return "do some magic!"
 
 
 def get_participant_by_name(name):  # noqa: E501
@@ -28,7 +28,7 @@ def get_participant_by_name(name):  # noqa: E501
 
     :rtype: Participant
     """
-    return 'do some magic!'
+    return "do some magic!"
 
 
 def get_participants():  # noqa: E501
@@ -39,7 +39,7 @@ def get_participants():  # noqa: E501
 
     :rtype: Participant
     """
-    return 'do some magic!'
+    return "do some magic!"
 
 
 def participants_regions():  # noqa: E501
@@ -50,4 +50,4 @@ def participants_regions():  # noqa: E501
 
     :rtype: object
     """
-    return 'do some magic!'
+    return "do some magic!"

@@ -15,7 +15,7 @@ def find_treaties_by_status(status):  # noqa: E501
 
     :rtype: List[Treaty]
     """
-    return 'do some magic!'
+    return "do some magic!"
 
 
 def find_treaties_by_tags(tags):  # noqa: E501
@@ -28,7 +28,7 @@ def find_treaties_by_tags(tags):  # noqa: E501
 
     :rtype: List[Treaty]
     """
-    return 'do some magic!'
+    return "do some magic!"
 
 
 def get_treaties():  # noqa: E501
@@ -39,7 +39,7 @@ def get_treaties():  # noqa: E501
 
     :rtype: List[Treaty]
     """
-    return 'do some magic!'
+    return "do some magic!"
 
 
 def get_treaty_by_id(treatyId):  # noqa: E501
@@ -52,4 +52,4 @@ def get_treaty_by_id(treatyId):  # noqa: E501
 
     :rtype: Treaty
     """
-    return 'do some magic!'
+    return "do some magic!"
